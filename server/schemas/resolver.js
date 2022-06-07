@@ -29,6 +29,22 @@ const resolvers = {
             const token = signToken(user)
             return {token, user};
         },
+        saveGame: async(_parent, {game}, context) =>{
+            console.log(context.user, game) 
+            if(context.user) {
+                const updatedUser = await User.findOneAndUpdate(
+                    {_id: context.user_id},
+                    //may need to be game from saveGame mutation
+                    {$addToSet:{savedGames:{gameId}}},
+                    {new: true}
+                )
+                if(!updatedUser) {
+                    throw new AuthenticationError('please login to save')
+                }
+            }
+        },
+
+        removeGame:
     },
    
 }
