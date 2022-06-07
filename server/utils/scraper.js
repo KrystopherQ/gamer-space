@@ -37,6 +37,10 @@ const getPostNames = async () => {
 			const postTitle = $(el).text()
 			PostNames.push(postTitle)
 		});
+    $('.outbound').each( (index, value) => {
+			var link = $(value).attr('href');
+			PostNames.push({"link": link});
+		});
 		return PostNames;
 	} catch (error) {
 		throw error;
