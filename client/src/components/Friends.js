@@ -15,7 +15,7 @@ const Friends() {
 
         {/*navbar */}
         <ul className='hidden md:flex'>
-          <li class="btn btn-ghost bg-neutral normal-case text-xl" >
+          <li class="btn btn-ghost normal-case text-xl" >
             <Link to='/feed'>
               Feed
             </Link>
@@ -25,7 +25,7 @@ const Friends() {
               Profile
             </Link>
           </li>
-          <li class="btn btn-ghost normal-case text-xl">
+          <li class="btn btn-ghost bg-neutral normal-case text-xl">
             <Link to='/friends'>
               Friends
             </Link>
