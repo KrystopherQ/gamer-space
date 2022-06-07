@@ -63,7 +63,7 @@ const Friends() {
             </li>
             <li className='py-6 text-4xl'>
               <Link to='/minigames'>
-                Friends
+                Mini Games
               </Link>
             </li>
           </ul>
