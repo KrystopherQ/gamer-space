@@ -44,7 +44,18 @@ const resolvers = {
             }
         },
 
-        removeGame:
+        removeGame: async (_parent,{gameId}, context)=> {
+            const updatedUser = await User.findOneAndUpdate(
+                {_id: context.user_id},
+                {$pull:{savedGames: {gameId}}},
+                {new: true}
+            )
+            if(!updatedUser){
+                throw new AuthenticationError('no game to delete')
+            }
+            return updatedUser
+        }
     },
    
 }
+module.exports = resolvers;
