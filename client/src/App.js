@@ -1,7 +1,7 @@
-import Feed from "./components/Feed.jsx";
-import Profile from "./components/Profile.jsx";
-import Friends from "./components/Friends.jsx";
-import MiniGames from "./components/MiniGames.jsx";
+import Feed from "./Components/Feed.jsx";
+import Profile from "./Components/Profile.jsx";
+import Friends from "./Components/Friends.jsx";
+import MiniGames from "./Components/MiniGames.jsx";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React from 'react';
 
