@@ -1,6 +1,6 @@
-const { Users, Games, Posts, Comments } = require('../models')
+const { User, Games, Post, Comments } = require('../models')
 const { signToken } = require('../utils/auth')
-const { AuthenticationError } = require('')
+const { AuthenticationError } = require('apollo-server-express')
 
 const resolvers = {
     Query: {
@@ -11,6 +11,8 @@ const resolvers = {
             }
             throw new AuthenticationError('Login Please'); ''
         },
+    },
+    Mutation: {
         addUser: async (_parent, { username, email, password }) => {
             const user = await User.create(
                 { username, email, password })
@@ -56,6 +58,7 @@ const resolvers = {
             return updatedUser
         }
     },
+
 
 }
 module.exports = resolvers;
