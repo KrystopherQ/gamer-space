@@ -7,7 +7,6 @@ type User {
     username: String
     email: String
     password: String
-    gameCount: Int
     savedGames: [Game]!
     posts: [Post]
 }
