@@ -19,7 +19,6 @@ const postSchema = new Schema(
         username: {
             type: String,
         },
-        comments: [Comments],
     },
     {
         toJSON: {
@@ -27,12 +26,6 @@ const postSchema = new Schema(
         },
     }
 )
-//virtuals for reaction count
-commentSchema
-    .virtual('getComment')
-    .get(function(){
-        return this.comments.length; 
-    })
 
 const Posts = model('post', postSchema);
 

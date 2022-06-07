@@ -9,6 +9,7 @@ type User {
     password: String
     gameCount: Int
     savedGames: [Game]!
+    posts: [Post]
 }
 type Game {
     gameId: ID
@@ -21,9 +22,15 @@ input saveGameToUser {
     name: String
     box_art_url: String
 }
-type: Posts {
+type Posts {
+    id: ID
     postText: String
-    username: [User]
+    username: User
+}
+type Comments {
+    id: ID
+    commentText: String
+    postComment: Post
 }
 type Auth{
     token: ID!
@@ -39,6 +46,8 @@ type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     saveGame(game: saveGameToUser): User
     removeGame(gameId: ID!): User
+    addPost(postText:String!): User
+    addComment(commentText:String!): Post
 }
 
 `
