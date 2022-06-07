@@ -20,4 +20,18 @@ export const ADD_USER = gql `
                 username
             }
         }
-    
+  ` 
+export const SAVE_GAME = gql `
+        mutation saveGame($gameToSave: saveGameToUser) {
+            saveGame(game: $gameToSave){
+                _id
+                username
+                email
+                savedGames {
+                    gameId
+                    name
+                    box_art_url
+                }
+            }
+        }
+` 
