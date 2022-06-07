@@ -21,6 +21,10 @@ input saveGameToUser {
     name: String
     box_art_url: String
 }
+type: Posts {
+    postText: String
+    username: [User]
+}
 type Auth{
     token: ID!
     user: User

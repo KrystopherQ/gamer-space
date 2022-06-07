@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
-
+const Post = require('./Posts')
 const gameSchema = require('./Games')
 
 const userSchema = new Schema(
@@ -21,9 +21,9 @@ const userSchema = new Schema(
         required: true,
       },
       savedGames: [gameSchema],
-      thoughts: [{
+      posts: [{
         type: Schema.Types.ObjectId,
-        ref: 'thought'
+        ref: 'post'
     }],
     friends: [{
         type: Schema.Types.ObjectId,
