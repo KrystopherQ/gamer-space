@@ -11,6 +11,12 @@ const resolvers = {
             }
             throw new AuthenticationError('Login Please');''
         }
+        addUser: async (_parent, {username,email,password})=>{
+            const user = await User.create(
+                {username, email, password})
+                const token = signToken(user)
+                return {token, user}
+        },
     },
    
 }
