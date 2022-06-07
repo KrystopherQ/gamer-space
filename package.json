@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/KrystopherQ/gamer-space/issues"
   },
-  "homepage": "https://github.com/KrystopherQ/gamer-space#readme",
+  "homepage": ".",
   "dependencies": {
     "react-router-dom": "^6.3.0"
   }
