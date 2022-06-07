@@ -12,11 +12,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.27.2",
-    "cheerio": "^1.0.0-rc.11",
     "apollo-server-express": "^3.8.1",
+    "axios": "^0.27.2",
     "bcrypt": "^4.0.1",
-    "express": "^4.17.1",
+    "cheerio": "^1.0.0-rc.11",
+    "express": "^4.18.1",
     "graphql": "^16.5.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.10"
@@ -24,5 +24,4 @@
   "devDependencies": {
     "nodemon": "^2.0.3"
   }
-  }
-
+}
