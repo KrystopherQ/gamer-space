@@ -68,7 +68,19 @@ const Feed = () => {
             </li>
           </ul>
         </div>
-
+      </div>
+      <div className='w-full h-80'>
+        <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full text-white font-serif grid-cols-2'>
+          <h1 className='text-4xl'>Feed</h1>
+          <div className='flex grid-cols-2 gap-4'>
+            <div class="card w-96 bg-neutral shadow-2xl">
+              <div class="card-body">
+                <h2 class="card-title">Top Gaming News</h2>
+                <p>Enter Gaming News Here</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
