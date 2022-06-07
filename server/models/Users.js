@@ -14,13 +14,21 @@ const userSchema = new Schema(
         type: String,
         required: true,
         unique: true,
-        match: [/.+@.+\..+/, 'Must use a valid email address'],
+        match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, 'Use a valid email address']
       },
       password: {
         type: String,
         required: true,
       },
       savedGames: [gameSchema],
+      thoughts: [{
+        type: Schema.Types.ObjectId,
+        ref: 'thought'
+    }],
+    friends: [{
+        type: Schema.Types.ObjectId,
+        ref: 'user'
+    }],
     },
     {
       toJSON: {
