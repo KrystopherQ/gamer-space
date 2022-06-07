@@ -80,6 +80,12 @@ function Profile() {
                   <p>Enter Friends Here</p>
                 </div>
               </div>
+              <div class="card w-96 bg-primary shadow-2xl">
+                <div class="card-body">
+                  <h2 class="card-title">Friend Post</h2>
+                  <p>Enter Friend Posts Here</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
