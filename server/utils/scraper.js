@@ -38,15 +38,16 @@ const getPostNames = async () => {
 		);
 		const $ = cheerio.load(data);
 		const PostNames = [];
-		$('div > p.title > a'+'.outbound').each((_idx, el,value) => {
+		$('div > p.title > a').each((_idx, el,value) => {
 			const postTitle = $(el).text()
 			var link = $(value).attr('href');
-			PostNames.push(postTitle,{"link": link})
+			// PostNames.push(postTitle,{"link": link})
+		
+    $('.outbound').each( (index, value) => {
+			var link = $(value).attr('href');
+			PostNames.push([postTitle,link]);
 		});
-    // $('.outbound').each( (index, value) => {
-		// 	var link = $(value).attr('href');
-		// 	PostNames.push({"link": link});
-		// });
+	});
 		return PostNames;
 	} catch (error) {
 		throw error;
