@@ -35,3 +35,19 @@ export const SAVE_GAME = gql `
             }
         }
 ` 
+export const REMOVE_GAME = gql `
+        mutation removeGame($gameId: ID) {
+            removeGame(gameId: $gameId){
+                _id
+                username
+                email
+                password
+                bookCount
+                savedGame{
+                    gameId
+                    name
+                    box_art_url
+                }
+            }
+        }
+`
