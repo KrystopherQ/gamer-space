@@ -39,6 +39,11 @@ const Feed = () => {
             <input type="text" placeholder="Search" class="input input-bordered" />
           </div>
         </ul>
+
+        {/*Hamburger */}
+        <div onClick={handleClick} className='md:hidden z-10'>
+          {!nav ? <FaBars /> : <FaTimes />}
+        </div>
       </div>
     </div>
   )
