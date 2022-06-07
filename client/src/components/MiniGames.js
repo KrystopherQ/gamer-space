@@ -4,5 +4,7 @@ import Logo from '../assets/Gamer Space-logos_transparent.png';
 import { Link } from 'react-router-dom';
 
 function MiniGames() {
+  const [nav, setNav] = useState(false)
+  const handleClick = () => setNav(!nav)
 
 }
