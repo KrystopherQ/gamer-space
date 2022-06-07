@@ -45,6 +45,30 @@ const Friends() {
           {!nav ? <FaBars /> : <FaTimes />}
         </div>
 
+        {/*Mobile*/}
+        <div>
+          <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#556b2f] flex flex-col justify-center items-center'}>
+            <li className='py-6 text-4xl'>
+              <Link to='/feed'>
+                Feed
+              </Link></li>
+            <li className='py-6 text-4xl'>
+              <Link to='/profile'>
+                Profile
+              </Link></li>
+            <li className='py-6 text-4xl'>
+              <Link to='/friends'>
+                Friends
+              </Link>
+            </li>
+            <li className='py-6 text-4xl'>
+              <Link to='/minigames'>
+                Friends
+              </Link>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </div>
   )
