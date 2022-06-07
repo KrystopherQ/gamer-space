@@ -1,5 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+import Feed from "./components/Feed";
+import Profile from "./components/Profile";
+import Friends from "./components/Friends";
+import MiniGames from "./components/MiniGames";
 
 function App() {
   return (
