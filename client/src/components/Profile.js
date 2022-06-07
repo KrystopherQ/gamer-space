@@ -39,6 +39,11 @@ function Profile() {
             </div>
           </ul>
 
+          {/*Hamburger */}
+          <div onClick={handleClick} className='md:hidden z-10'>
+            {!nav ? <FaBars /> : <FaTimes />}
+          </div>
+
         </div>
       </div>
     </div>
