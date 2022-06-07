@@ -3,26 +3,30 @@ const cheerio = require('cheerio');
 
 
 
-const getPostTitles = async () => {
+const getPostLinks = async () => {
 	try {
 		const { data } = await axios.get(
 			'https://old.reddit.com/r/gamingnews/'
 		);
 		const $ = cheerio.load(data);
-		const postTitles = [];
+		const links = [];
+		// const postTitles = [];
+$('.outbound').each( (index, value) => {
+	var link = $(value).attr('href');
+	links.push({"link": link});
+});
+$('div > p.title > a').each((_idx, el) => {
+	const postTitle = $(el).text()
+	links.push(postTitle)
+});
+return links;
+} catch (error) {
+	throw error;
+}
+}
+getPostLinks()
+.then((links) => console.log(links));
 
-		$('div > p.title > a').each((_idx, el) => {
-			const postTitle = $(el).text()
-			postTitles.push(postTitle)
-		});
-
-		return postTitles;
-	} catch (error) {
-		throw error;
-	}
-};
-getPostTitles()
-.then((postTitles) => console.log(postTitles));
 
 const getPostNames = async () => {
 	try {
