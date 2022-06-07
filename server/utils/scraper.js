@@ -10,13 +10,14 @@ const getPostLinks = async () => {
 		const $ = cheerio.load(data);
 		const links = [];
 		// const postTitles = [];
-$('.outbound').each( (index, value) => {
-	var link = $(value).attr('href');
-	links.push({"link": link});
-});
-$('div > p.title > a').each((_idx, el) => {
+// $('.outbound').each( (index, value) => {
+// 	var link = $(value).attr('href');
+// 	links.push({"link": link});
+// });
+$('div > p.title > a'+'.outbound').each((_idx, el,value) => {
 	const postTitle = $(el).text()
-	links.push(postTitle)
+	var link = $(value).attr('href');
+	links.push(postTitle,{"link": link})
 });
 return links;
 } catch (error) {
@@ -33,14 +34,15 @@ const getPostNames = async () => {
 		);
 		const $ = cheerio.load(data);
 		const PostNames = [];
-		$('div > p.title > a').each((_idx, el) => {
+		$('div > p.title > a'+'.outbound').each((_idx, el,value) => {
 			const postTitle = $(el).text()
-			PostNames.push(postTitle)
-		});
-    $('.outbound').each( (index, value) => {
 			var link = $(value).attr('href');
-			PostNames.push({"link": link});
+			PostNames.push(postTitle,{"link": link})
 		});
+    // $('.outbound').each( (index, value) => {
+		// 	var link = $(value).attr('href');
+		// 	PostNames.push({"link": link});
+		// });
 		return PostNames;
 	} catch (error) {
 		throw error;
