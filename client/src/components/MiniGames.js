@@ -91,3 +91,5 @@ function MiniGames() {
     </div>
   )
 }
+
+export default MiniGames;

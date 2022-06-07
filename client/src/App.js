@@ -2,6 +2,7 @@ import Feed from "./components/Feed";
 import Profile from "./components/Profile";
 import Friends from "./components/Friends";
 import MiniGames from "./components/MiniGames";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
