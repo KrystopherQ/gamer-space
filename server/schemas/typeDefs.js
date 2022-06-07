@@ -21,10 +21,10 @@ input saveGameToUser {
     name: String
     box_art_url: String
 }
-type Posts {
+type Post {
     id: ID
     postText: String
-    username: User
+    userPost: User
 }
 type Comments {
     id: ID

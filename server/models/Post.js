@@ -1,5 +1,4 @@
 const {Schema, model} = require('mongoose');
-const Comments = require('./Comments');
 
 const postSchema = new Schema(
     {
@@ -27,6 +26,6 @@ const postSchema = new Schema(
     }
 )
 
-const Posts = model('post', postSchema);
 
-module.exports = Posts
+
+module.exports = postSchema
