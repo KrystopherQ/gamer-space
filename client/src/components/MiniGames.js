@@ -67,7 +67,25 @@ function MiniGames() {
               </li>
             </ul>
           </div>
-
+        </div>
+      </div>
+      <div className='w-full h-80'>
+        <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full text-white font-serif grid-cols-2'>
+          <h1 className='text-4xl'>Mini Games</h1>
+          <div className='flex grid-cols-2 gap-4'>
+            <div class="card w-96 bg-neutral shadow-2xl">
+              <div class="card-body">
+                <h2 class="card-title">Friend Search</h2>
+                <p>Enter Friends Here</p>
+              </div>
+            </div>
+            <div class="card w-96 bg-primary shadow-2xl">
+              <div class="card-body">
+                <h2 class="card-title">Friend Post</h2>
+                <p>Enter Friend Posts Here</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
