@@ -4,5 +4,6 @@ import Logo from '../assets/Gamer Space-logos_transparent.png';
 import { Link } from 'react-router-dom';
 
 function Profile() {
-
+  const [nav, setNav] = useState(false)
+  const handleClick = () => setNav(!nav)
 }
