@@ -6,4 +6,15 @@ import { Link } from 'react-router-dom';
 function Profile() {
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
+  return (
+    <div>
+      <div class='nav'>
+        <div className='fixed w-full h-[80px] flex justify-between items-center px-4 text-gray-300 font-serif'>
+          <div>
+            <img src={Logo} alt="Logo" style={{ width: '200px' }} />
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
