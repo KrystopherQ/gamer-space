@@ -79,6 +79,12 @@ const Feed = () => {
                 <p>Enter Gaming News Here</p>
               </div>
             </div>
+            <div class="card w-96 bg-primary shadow-2xl">
+              <div class="card-body">
+                <h2 class="card-title">Top Gaming News</h2>
+                <p>Enter Gaming News Here</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
