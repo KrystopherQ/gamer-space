@@ -40,9 +40,9 @@ function Profile() {
           </ul>
 
           {/*Hamburger */}
-          {/* <div onClick={handleClick} className='md:hidden z-10'>
+          <div onClick={handleClick} className='md:hidden z-10'>
             {!nav ? <FaBars /> : <FaTimes />}
-          </div> */}
+          </div>
 
           {/*Mobile*/}
           <div>
