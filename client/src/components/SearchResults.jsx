@@ -13,6 +13,32 @@ function SearchResult() {
           <div>
             <img src={Logo} alt="Logo" style={{ width: '200px' }} />
           </div>
+          <ul className='hidden md:flex'>
+            <li className="btn btn-ghost normal-case text-xl" >
+              <Link to='/feed'>
+                Feed
+              </Link>
+            </li>
+            <li className="btn btn-ghost normal-case text-xl">
+              <Link to='/profile'>
+                Profile
+              </Link>
+            </li>
+            <li className="btn btn-ghost normal-case text-xl">
+              <Link to='/friends'>
+                Friends
+              </Link>
+            </li>
+            <li className="btn btn-ghost bg-neutral normal-case text-xl">
+              <Link to='/minigames'>
+                Mini Games
+              </Link>
+            </li>
+            <div className="form-control">
+              <input type="text" placeholder="Search" className="input input-bordered" />
+            </div>
+          </ul>
+          
         </div>
       </div>
     </div>
