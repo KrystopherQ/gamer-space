@@ -45,6 +45,10 @@ const userSchema = new Schema(
       next();
   })
 
+  userSchema.methods.isCorrectPassword = async function (password) {
+    return bcrypt.compare(password, this.password);
+  };
+
   userSchema.virtual('gameCount').get(function(){
       return this.savedGames.length;
   })
