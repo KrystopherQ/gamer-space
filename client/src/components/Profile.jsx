@@ -15,7 +15,7 @@ function Profile() {
           </div>
           <ul className='hidden md:flex'>
             <li className="btn btn-ghost normal-case text-xl" >
-              <Link to='/feed'>
+              <Link to='/'>
                 Feed
               </Link>
             </li>
