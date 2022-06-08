@@ -15,28 +15,28 @@ function Friends() {
 
         {/*navbar */}
         <ul className='hidden md:flex'>
-          <li class="btn btn-ghost normal-case text-xl" >
+          <li className="btn btn-ghost normal-case text-xl" >
             <Link to='/feed'>
               Feed
             </Link>
           </li>
-          <li class="btn btn-ghost normal-case text-xl">
+          <li className="btn btn-ghost normal-case text-xl">
             <Link to='/profile'>
               Profile
             </Link>
           </li>
-          <li class="btn btn-ghost bg-neutral normal-case text-xl">
+          <li className="btn btn-ghost bg-neutral normal-case text-xl">
             <Link to='/friends'>
               Friends
             </Link>
           </li>
-          <li class="btn btn-ghost normal-case text-xl">
+          <li className="btn btn-ghost normal-case text-xl">
             <Link to='/minigames'>
               Mini Games
             </Link>
           </li>
-          <div class="form-control">
-            <input type="text" placeholder="Search" class="input input-bordered" />
+          <div className="form-control">
+            <input type="text" placeholder="Search" className="input input-bordered" />
           </div>
         </ul>
 
@@ -73,15 +73,15 @@ function Friends() {
         <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full text-white font-serif grid-cols-2'>
           <h1 className='text-4xl'>Feed</h1>
           <div className='flex grid-cols-2 gap-4'>
-            <div class="card w-96 bg-neutral shadow-2xl">
-              <div class="card-body">
-                <h2 class="card-title">Friend Search</h2>
+            <div className="card w-96 bg-neutral shadow-2xl">
+              <div className="card-body">
+                <h2 className="card-title">Friend Search</h2>
                 <p>Enter Friends List Here</p>
               </div>
             </div>
-            <div class="card w-96 bg-primary shadow-2xl">
-              <div class="card-body">
-                <h2 class="card-title">Friend Posts</h2>
+            <div className="card w-96 bg-primary shadow-2xl">
+              <div className="card-body">
+                <h2 className="card-title">Friend Posts</h2>
                 <p>Enter Friend Posts Here</p>
               </div>
             </div>

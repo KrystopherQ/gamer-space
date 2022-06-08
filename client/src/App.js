@@ -4,13 +4,13 @@ import Friends from "./Components/Friends.jsx";
 import MiniGames from "./Components/MiniGames.jsx";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React from 'react';
-import {ApolloClient, ApolloProvider, InMemoryCache, createHttpLink} from '@apollo/client'
+import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client'
 import { setContext } from '@apollo/client/link/context';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
-const authLink = setContext((_, {headers}) => {
+const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token')
 
   return {
@@ -28,14 +28,14 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-    <Router>
-      <Routes>
-        <Route exact path='/feed' element={<Feed />} />
-        <Route path='/profile' element={<Profile />} />
-        <Route path='/friends' element={<Friends />} />
-        <Route path='/minigames' element={<MiniGames />} />
-      </Routes>
-    </Router>
+      <Router>
+        <Routes>
+          <Route exact path='/' element={<Feed />} />
+          <Route path='/profile' element={<Profile />} />
+          <Route path='/friends' element={<Friends />} />
+          <Route path='/minigames' element={<MiniGames />} />
+        </Routes>
+      </Router>
     </ApolloProvider>
   );
 }
