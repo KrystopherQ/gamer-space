@@ -1,6 +1,7 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
+export function bot(){
 
 const getPostLinks = async () => {
 	try {
@@ -14,7 +15,7 @@ $('.outbound').each( (index, value) => {
 	var link = $(value).attr('href');
 	var title = $(value).text()
 	if(title) {
-		links.push( [title,link]);}
+		links.push({title,link});}
 	});
 // $('div > p.title>a').each((_idx,el) => {
 	// const postTitle = $(el).text()
@@ -51,7 +52,7 @@ const getPostNames = async () => {
 					var link = $(value).attr('href');
 			    var postTitle = $(value).text()
 			if(link){
-					PostNames.push([postTitle,link]);}
+					PostNames.push({postTitle,link});}
 				});
 		return PostNames;
 	} catch (error) {
@@ -61,4 +62,6 @@ const getPostNames = async () => {
 getPostNames()
 .then((PostNames) => console.log(PostNames));
 
+}
 
+bot();
