@@ -15,7 +15,7 @@ function Profile() {
           </div>
           <ul className='hidden md:flex'>
             <li className="btn btn-ghost normal-case text-xl" >
-              <Link to='/feed'>
+              <Link to='/'>
                 Feed
               </Link>
             </li>
@@ -40,9 +40,9 @@ function Profile() {
           </ul>
 
           {/*Hamburger */}
-          {/* <div onClick={handleClick} className='md:hidden z-10'>
+          <div onClick={handleClick} className='md:hidden z-10'>
             {!nav ? <FaBars /> : <FaTimes />}
-          </div> */}
+          </div>
 
           {/*Mobile*/}
           <div>
