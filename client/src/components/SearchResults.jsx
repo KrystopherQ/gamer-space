@@ -5,4 +5,5 @@ import { Link } from 'react-router-dom';
 
 function SearchResult() {
   const [nav, setNav] = useState(false)
+  const handleClick = () => setNav(!nav)
 }
