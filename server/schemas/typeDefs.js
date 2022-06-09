@@ -36,8 +36,15 @@ type Auth{
     user: User
 }
 
+type Link{
+    title: String
+    link: String
+}
+
 type Query{
     me: User
+    getPostNames: Link[]
+    getPostLinks: Link[]
 }
 
 type Mutation {
