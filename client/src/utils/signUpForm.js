@@ -40,9 +40,9 @@ const SignUpForm = () => {
     
     return (
         <>
-        {/* login */}
-        <input type="text" placeholder="email" class="input input-bordered input-info w-full max-w-xs" />
-        <input type="text" placeholder="password" class="input input-bordered input-info w-full max-w-xs" />
+        {/* login use in loginForm -> change to LoginForm */}
+        {/* <input type="text" placeholder="email" class="input input-bordered input-info w-full max-w-xs" />
+        <input type="text" placeholder="password" class="input input-bordered input-info w-full max-w-xs" /> */}
 
         {/* signup */}
         <input type="text" placeholder="username" class="input input-bordered input-info w-full max-w-xs" />
