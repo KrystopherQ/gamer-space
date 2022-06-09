@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from '../assets/Gamer Space-logos_transparent.png';
 import { Link } from 'react-router-dom';
-//import {bot} from '../utils/scraper'
+import {bot} from '../utils/scraper'
+console.log(bot)
 
 const Feed = () => {
   const [nav, setNav] = useState(false)
@@ -76,6 +77,7 @@ const Feed = () => {
           <div className='flex grid-cols-2 gap-4'>
                             {/* Gaming News */}                            
               {/* {bot.map((newsFeed) => {
+                console.log(bot)
                   return (
                 <div className="card w-96 bg-neutral shadow-2xl">
                 <div className="card-body">
