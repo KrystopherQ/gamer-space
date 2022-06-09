@@ -79,23 +79,20 @@ function Profile() {
           </div>
         </div>
       </div>
-      
-      <div className='cards'>
-        <div className='w-full h-80'>
-          <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full text-white font-serif grid-cols-2'>
-            <h1 className='text-4xl'>Profile</h1>
-            <div className='flex grid-cols-2 gap-4'>
-              <div className="card w-96 bg-neutral shadow-2xl">
-                <div className="card-body">
-                  <h2 className="card-title">Friend Search</h2>
-                  <p>Enter Friends Here</p>
-                </div>
+      <div className={nav ? 'hidden' : 'w-full h-80'}>
+        <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full text-white font-serif grid-cols-2'>
+          <h1 className='text-4xl'>Profile</h1>
+          <div className='flex grid-cols-2 gap-4'>
+            <div className="card w-96 bg-neutral shadow-2xl">
+              <div className="card-body">
+                <h2 className="card-title">Friend Search</h2>
+                <p>Enter Friends Here</p>
               </div>
-              <div className="card w-96 bg-primary shadow-2xl">
-                <div className="card-body">
-                  <h2 className="card-title">Friend Post</h2>
-                  <p>Enter Friend Posts Here</p>
-                </div>
+            </div>
+            <div className="card w-96 bg-primary shadow-2xl">
+              <div className="card-body">
+                <h2 className="card-title">Friend Post</h2>
+                <p>Enter Friend Posts Here</p>
               </div>
             </div>
           </div>
