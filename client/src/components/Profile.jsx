@@ -7,7 +7,7 @@ function Profile() {
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
   return (
-    <div>
+    <div className='flex'>
       <div className='nav'>
         <div className='fixed w-full h-[80px] flex justify-between items-center px-4 text-gray-300 font-serif'>
           <div>
@@ -37,6 +37,11 @@ function Profile() {
             <div className="form-control">
               <input type="text" placeholder="Search" className="input input-bordered" />
             </div>
+            <button class="btn btn-square btn-outline font-serif">
+              <Link to="/searchresults">
+                Go!
+              </Link>
+            </button>
           </ul>
 
           {/*Hamburger */}
@@ -46,46 +51,48 @@ function Profile() {
 
           {/*Mobile*/}
           <div>
-            <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#556b2f] flex flex-col justify-center items-center'}>
-              <li className='py-6 text-4xl'>
+            <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center'}>
+              <li className='py-6 text-4xl hover:bg-neutral'>
                 <Link to='/feed'>
                   Feed
                 </Link></li>
-              <li className='py-6 text-4xl'>
+              <li className='py-6 text-4xl hover:bg-neutral'>
                 <Link to='/profile'>
                   Profile
                 </Link></li>
-              <li className='py-6 text-4xl'>
+              <li className='py-6 text-4xl hover:bg-neutral'>
                 <Link to='/friends'>
                   Friends
                 </Link>
               </li>
-              <li className='py-6 text-4xl'>
+              <li className='py-6 text-4xl hover:bg-neutral'>
                 <Link to='/minigames'>
                   MiniGames
+                </Link>
+              </li>
+              <li className='py-6 text-4xl hover:bg-neutral'>
+                <Link to='/searchresults'>
+                  Search Results
                 </Link>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      
-      <div className='cards'>
-        <div className='w-full h-80'>
-          <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full text-white font-serif grid-cols-2'>
-            <h1 className='text-4xl'>Profile</h1>
-            <div className='flex grid-cols-2 gap-4'>
-              <div className="card w-96 bg-neutral shadow-2xl">
-                <div className="card-body">
-                  <h2 className="card-title">Friend Search</h2>
-                  <p>Enter Friends Here</p>
-                </div>
+      <div className={nav ? 'hidden' : 'w-full h-80'}>
+        <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full text-white font-serif grid-cols-2'>
+          <h1 className='text-4xl'>Profile</h1>
+          <div className='flex grid-cols-2 gap-4'>
+            <div className="card w-96 bg-neutral shadow-2xl">
+              <div className="card-body">
+                <h2 className="card-title">Friend Search</h2>
+                <p>Enter Friends Here</p>
               </div>
-              <div className="card w-96 bg-primary shadow-2xl">
-                <div className="card-body">
-                  <h2 className="card-title">Friend Post</h2>
-                  <p>Enter Friend Posts Here</p>
-                </div>
+            </div>
+            <div className="card w-96 bg-primary shadow-2xl">
+              <div className="card-body">
+                <h2 className="card-title">Friend Post</h2>
+                <p>Enter Friend Posts Here</p>
               </div>
             </div>
           </div>
