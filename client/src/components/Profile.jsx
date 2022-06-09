@@ -7,7 +7,7 @@ function Profile() {
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
   return (
-    <div>
+    <div className='flex'>
       <div className='nav'>
         <div className='fixed w-full h-[80px] flex justify-between items-center px-4 text-gray-300 font-serif'>
           <div>
