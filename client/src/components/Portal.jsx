@@ -13,17 +13,17 @@ const Portal = () => {
                 // render pages 
                 <>
 
-                        
+
                 </>
             ) : (
                 //render login Hero
                 <>
-                    <div class="hero min-h-screen bg-base-200">
+                    <div class="hero min-h-screen" style={{backgroundImage: `url("https://melmagazine.com/wp-content/uploads/2018/08/1PLZJfMY2tvncNstYR59cmw.gif")`}}>
                         <div class="hero-content text-center">
                             <div class="max-w-md">
-                                <h1 class="text-5xl font-bold">Hello there</h1>
-                                <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                                <button class="btn btn-primary">Get Started</button>
+                                <h1 class="text-5xl font-bold text-neutral">GaMeR sPaCe</h1>
+                                <p class="py-6 font-bold text-neutral">In A wOrLd WhErE GaMeRs ArE nOt ToXiC</p>
+                                <button class="btn btn-primary">Login/Signup</button>
                             </div>
                         </div>
                     </div>
