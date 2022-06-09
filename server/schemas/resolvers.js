@@ -59,8 +59,8 @@ const resolvers = {
         }
     },
     newsFeed: async (_parent, { links, PostNames }) => {
-        console.log(context.user, news)
-        if (context.user) {
+        console.log(context.User, news)
+        if (context.User) {
             const updateNews = await User.findall(
                 { links: true},
                 { PostNames: true }
