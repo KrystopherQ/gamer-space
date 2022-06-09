@@ -1,7 +1,7 @@
 require('dotenv').config();
 const request = require('request')
 
-const getToken = (url, callback) => {
+ const getToken = (url, callback) => {
     const options ={
         url:process.env.GET_TOKEN,
         json: true,
@@ -15,8 +15,9 @@ const getToken = (url, callback) => {
         if(err){
             return console.log(err)
         }
-        console.log('status: ${res.statusCode')
-        console.log(body)
+        //console.log('status: ${res.statusCode')
+        //bearer is body
+        //console.log(body)
         callback(res);
     });
 };
@@ -39,12 +40,21 @@ const getGames = (url,accessToken,callback) => {
             'Authorization': 'Bearer '+ accessToken
         }
     };
-    request.get(gameOptions,(err, res, body)=>{
-        if(err) {
-            return console.log(err)
-        }
-        console.log('Status: ${res.statusCode}')
-        console.log(JSON.parse(body))
+    request.get(gameOptions,(req, res, body)=>{
+        var data = res.body
+        
+        var gameData = res.body
+        var games = gameData.map(i=>i.name)
+        // const gameCollection = [].concat(...games)
+        // console.log(gameCollection)
+        //console.log('Status: ${res.statusCode}')
+        //console.log(res)
+        //data and games 
+        //console.log(JSON.parse(res.body))
+        console.log(JSON.parse(res.body))
+    
+        
+        
     })
 }
 
