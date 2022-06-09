@@ -11,16 +11,16 @@ const resolvers = {
             }
             throw new AuthenticationError('Login Please'); ''
         },
-        getPostLinks: async() =>{
-            if(){
+        // getPostLinks: async() =>{
+        //     if(){
 
-            }
-        },
-        getPostNames: async() ={
-            if(){
+        //     }
+        // },
+        // getPostNames: async() ={
+        //     if(){
 
-            }
-        }
+        //     }
+        // }
     },
     Mutation: {
         addUser: async (_parent, { username, email, password }) => {
