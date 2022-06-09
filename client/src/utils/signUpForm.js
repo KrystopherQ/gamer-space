@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import {ADD_USER} from '../utils/mutations'
+import {ADD_USER} from './mutations'
 import {useMutation} from '@apollo/client'
-import Auth from '../utils/auth'
+import Auth from './auth'
 
 const SignUpForm = () => {
     const [userFormData, setUserFormData] = useState({username: '',email:'', password: ''});
@@ -21,6 +21,7 @@ const SignUpForm = () => {
         //     event.preventDefault();
         //     event.stopPropagation();
         // }
+        console.log(userFormData)
         try {
             const {data} = await addUser({
                 variables: {...userFormData}});
@@ -45,15 +46,15 @@ const SignUpForm = () => {
         {/* signup */}
         {/* noValidate validated={validated} */}
         <form  onSubmit={handleFormSubmit}>
-            <input type="text" placeholder="username" className="input input-bordered input-info w-full max-w-xs" 
+            <input type="text" name="username" placeholder="username" className="input input-bordered input-info w-full max-w-xs" 
             onChange={handleInputChange} 
             defaultValue={userFormData.username}
             />
-            <input type="text" placeholder="email" className="input input-bordered input-info w-full max-w-xs" 
+            <input type="text" name="email" placeholder="email" className="input input-bordered input-info w-full max-w-xs" 
             onChange={handleInputChange} 
             defaultValue={userFormData.email}
             />
-            <input type="text" placeholder="password" className="input input-bordered input-info w-full max-w-xs"
+            <input type="text" name="password" placeholder="password" className="input input-bordered input-info w-full max-w-xs"
             onChange={handleInputChange} 
             defaultValue={userFormData.password}
             />

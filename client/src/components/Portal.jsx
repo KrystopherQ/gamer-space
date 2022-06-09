@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import SignUpForm, { signUpForm } from '../utils/signUpForm'
+import SignUpForm from '../utils/SignUpForm'
 import { loginForm } from '../utils/loginForm'
 import Auth from '../utils/auth'
 
@@ -17,8 +17,9 @@ const Portal = () => {
                 </>
             ) : (
                 //render login Hero
+                // style={{ backgroundImage: `url("https://melmagazine.com/wp-content/uploads/2018/08/1PLZJfMY2tvncNstYR59cmw.gif")` }}
                 <>
-                    <div className="hero min-h-screen" style={{ backgroundImage: `url("https://melmagazine.com/wp-content/uploads/2018/08/1PLZJfMY2tvncNstYR59cmw.gif")` }}>
+                    <div className="hero min-h-screen bg-base-200" >
                         <div className="hero-content text-center">
                             <div className="max-w-md">
                                 <h1 className="text-5xl font-bold text-neutral">GaMeR sPaCe</h1>
