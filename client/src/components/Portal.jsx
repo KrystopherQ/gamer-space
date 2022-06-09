@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { signUpForm } from '../utils/signUpForm'
+import SignUpForm, { signUpForm } from '../utils/signUpForm'
 import { loginForm } from '../utils/loginForm'
 import Auth from '../utils/auth'
 
@@ -39,6 +39,7 @@ const Portal = () => {
                                         <div className="card-body items-center text-center">
                                             <h2 className="card-title">Login/SignUp!</h2>
                                             {/* input SignUpForm */}
+                                            <SignUpForm />
                                         </div>
                                     </div>
                                ):(<></>) }

@@ -16,16 +16,14 @@ const SignUpForm = () => {
     const handleFormSubmit = async (event) => {    
     event.preventDefault();
 
-        const form = event.currentTarget;
-        if(form.checkValidity() ===false){
-            event.preventDefault();
-            event.stopPropagation();
-        }
-
+        // const theForm = event.currentTarget;
+        // if(theForm.checkValidity() ===false){
+        //     event.preventDefault();
+        //     event.stopPropagation();
+        // }
         try {
             const {data} = await addUser({
                 variables: {...userFormData}});
-
             Auth.login(data.addUser.token)
         } catch(err) {
             console.error(err);
@@ -45,9 +43,27 @@ const SignUpForm = () => {
         <input type="text" placeholder="password" class="input input-bordered input-info w-full max-w-xs" /> */}
 
         {/* signup */}
-        <input type="text" placeholder="username" class="input input-bordered input-info w-full max-w-xs" />
-        <input type="text" placeholder="email" class="input input-bordered input-info w-full max-w-xs" />
-        <input type="text" placeholder="password" class="input input-bordered input-info w-full max-w-xs" />
+        {/* noValidate validated={validated} */}
+        <form  onSubmit={handleFormSubmit}>
+            <input type="text" placeholder="username" className="input input-bordered input-info w-full max-w-xs" 
+            onChange={handleInputChange} 
+            defaultValue={userFormData.username}
+            />
+            <input type="text" placeholder="email" className="input input-bordered input-info w-full max-w-xs" 
+            onChange={handleInputChange} 
+            defaultValue={userFormData.email}
+            />
+            <input type="text" placeholder="password" className="input input-bordered input-info w-full max-w-xs"
+            onChange={handleInputChange} 
+            defaultValue={userFormData.password}
+            />
+            <input  type="submit" value="Submit" />
+            {/* <button className="btn btn-primary"
+            disabled={!(userFormData.username && userFormData.email && userFormData.password)}
+            type="submit">
+            Submit
+            </button> */}
+        </form>
         </>
     )
 }
