@@ -38,6 +38,11 @@ function Friends() {
           <div className="form-control">
             <input type="text" placeholder="Search" className="input input-bordered" />
           </div>
+          <button class="btn btn-square btn-outline font-serif">
+              <Link to="/searchresults">
+                Go!
+              </Link>
+            </button>
         </ul>
 
         {/*Hamburger */}
