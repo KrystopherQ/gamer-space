@@ -1,7 +1,7 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-export function bot(){
+function bot(){
 
 const getPostLinks = async () => {
 	try {
@@ -65,3 +65,5 @@ getPostNames()
 }
 
 bot();
+
+module.exports = bot;

@@ -1,4 +1,4 @@
-const { User, Games, Post, Comments } = require('../models')
+const { User, Games, Post, Comments, News } = require('../models')
 const { signToken } = require('../utils/auth')
 const { AuthenticationError } = require('apollo-server-express')
 
@@ -58,6 +58,18 @@ const resolvers = {
             return updatedUser
         }
     },
+    // newsFeed: async (_parent, { links, PostNames }) => {
+    //     console.log(context.User, news)
+    //     if (context.User) {
+    //         const updateNews = await User.findall(
+    //             { links: true},
+    //             { PostNames: true }
+    //         )
+    //         if (!updateNews) {
+    //             throw new AuthenticationError('please login to view articles')
+    //         }
+    //     }
+    // },
 
 
 }
