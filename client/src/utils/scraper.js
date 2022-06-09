@@ -1,13 +1,16 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-function bot(){
+export function bot(){
 
 const getPostLinks = async () => {
 	try {
 		const { data } = await axios.get(
 			'https://old.reddit.com/r/gamingnews/'
-		);
+		// ,{headers: { "Access-Control-Allow-Origin": "*",
+		// "Access-Control-Allow-Credentials": "true",
+		// "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"}
+	);
 		const $ = cheerio.load(data);
 		const links = [];
 		// const postTitles = [];
@@ -38,8 +41,11 @@ getPostLinks()
 const getPostNames = async () => {
 	try {
 		const { data } = await axios.get(
-			'https://old.reddit.com/r/games/'
-		);
+			'https://old.reddit.com/r/games/',
+	// 		{headers: { "Access-Control-Allow-Origin": "*",
+	// 		"Access-Control-Allow-Credentials": "true",
+	// 		"Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"}
+	);
 		const $ = cheerio.load(data);
 		const PostNames = [];
 		// $('div > p.title > a').each((_idx, el) => {
@@ -65,5 +71,4 @@ getPostNames()
 }
 
 bot();
-
-module.exports = bot;
+ console.log(bot)
