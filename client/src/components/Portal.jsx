@@ -10,13 +10,14 @@ const portal = () => {
     return (
         <>
             {Auth.loggedIn() ? (
-                //render login Hero
+                // render pages 
                 <>
                     
 
                 </>
             ) : (
-                // render pages 
+                
+                //render login Hero
                 <>
                 
                 </>
