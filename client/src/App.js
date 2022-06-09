@@ -2,11 +2,7 @@ import Feed from "./Components/Feed.jsx";
 import Profile from "./Components/Profile.jsx";
 import Friends from "./Components/Friends.jsx";
 import MiniGames from "./Components/MiniGames.jsx";
-<<<<<<< HEAD
-import SearchResults from "./Components/SearchResults.jsx";
-=======
 import Portal from "./Components/Portal"
->>>>>>> e3f5ba4fbef9c484a51da6e6e4a8fa98593c0815
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React from 'react';
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client'
@@ -35,7 +31,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <Routes>
-          <Route path='/' element={<Portal/>} />
+          <Route path='/' element={<Portal />} />
           <Route exact path='/feed' element={<Feed />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/friends' element={<Friends />} />
