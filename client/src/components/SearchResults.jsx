@@ -70,6 +70,11 @@ function SearchResult() {
                   MiniGames
                 </Link>
               </li>
+              <li className='py-6 text-4xl'>
+                <Link to='/searchresults'>
+                  Search Results
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
