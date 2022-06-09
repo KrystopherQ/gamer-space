@@ -54,7 +54,7 @@ const SignUpForm = () => {
             onChange={handleInputChange} 
             defaultValue={userFormData.email}
             />
-            <input type="text" name="password" placeholder="password" className="input input-bordered input-info w-full max-w-xs"
+            <input type="password" name="password" placeholder="password" className="input input-bordered input-info w-full max-w-xs"
             onChange={handleInputChange} 
             defaultValue={userFormData.password}
             />
