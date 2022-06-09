@@ -58,18 +58,18 @@ const resolvers = {
             return updatedUser
         }
     },
-    newsFeed: async (_parent, { links, PostNames }) => {
-        console.log(context.User, news)
-        if (context.User) {
-            const updateNews = await User.findall(
-                { links: true},
-                { PostNames: true }
-            )
-            if (!updateNews) {
-                throw new AuthenticationError('please login to view articles')
-            }
-        }
-    },
+    // newsFeed: async (_parent, { links, PostNames }) => {
+    //     console.log(context.User, news)
+    //     if (context.User) {
+    //         const updateNews = await User.findall(
+    //             { links: true},
+    //             { PostNames: true }
+    //         )
+    //         if (!updateNews) {
+    //             throw new AuthenticationError('please login to view articles')
+    //         }
+    //     }
+    // },
 
 
 }
