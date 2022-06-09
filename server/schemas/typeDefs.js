@@ -43,8 +43,7 @@ type Link{
 
 type Query{
     me: User
-    getPostNames: Link[]
-    getPostLinks: Link[]
+
 }
 
 type Mutation {

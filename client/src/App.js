@@ -32,7 +32,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <Routes>
-          <Route path='/' element={<Portal />} />
+          <Route path='*' element={<Portal />} />
           <Route exact path='/feed' element={<Feed />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/friends' element={<Friends />} />
