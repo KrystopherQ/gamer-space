@@ -1,4 +1,4 @@
-const { User, Games, Post, Comments, News } = require('../models')
+const { User, Games, Post, Comments } = require('../models')
 const { signToken } = require('../utils/auth')
 const { AuthenticationError } = require('apollo-server-express')
 
@@ -11,6 +11,16 @@ const resolvers = {
             }
             throw new AuthenticationError('Login Please'); ''
         },
+        getPostLinks: async() =>{
+            if(){
+
+            }
+        },
+        getPostNames: async() ={
+            if(){
+
+            }
+        }
     },
     Mutation: {
         addUser: async (_parent, { username, email, password }) => {
