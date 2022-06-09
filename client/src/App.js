@@ -1,4 +1,4 @@
-import Feed from "./Components/Feed.jsx";
+import Feed from "./Components/Feed";
 import Profile from "./Components/Profile.jsx";
 import Friends from "./Components/Friends.jsx";
 import MiniGames from "./Components/MiniGames.jsx";
