@@ -20,6 +20,7 @@ export const ADD_USER = gql `
                 username
             }
         }
+    }
   ` 
 export const SAVE_GAME = gql `
         mutation saveGame($gameToSave: saveGameToUser) {

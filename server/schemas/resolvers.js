@@ -57,7 +57,7 @@ const resolvers = {
             }
             return updatedUser
         }
-    },
+    }
     // newsFeed: async (_parent, { links, PostNames }) => {
     //     console.log(context.User, news)
     //     if (context.User) {
