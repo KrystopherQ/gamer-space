@@ -52,20 +52,20 @@ function Profile() {
           {/*Mobile*/}
           <div>
             <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#556b2f] flex flex-col justify-center items-center'}>
-              <li className='py-6 text-4xl'>
+              <li className='py-6 text-4xl hover:bg-neutral'>
                 <Link to='/feed'>
                   Feed
                 </Link></li>
-              <li className='py-6 text-4xl'>
+              <li className='py-6 text-4xl hover:bg-neutral'>
                 <Link to='/profile'>
                   Profile
                 </Link></li>
-              <li className='py-6 text-4xl'>
+              <li className='py-6 text-4xl hover:bg-neutral'>
                 <Link to='/friends'>
                   Friends
                 </Link>
               </li>
-              <li className='py-6 text-4xl'>
+              <li className='py-6 text-4xl hover:bg-neutral'>
                 <Link to='/minigames'>
                   MiniGames
                 </Link>
