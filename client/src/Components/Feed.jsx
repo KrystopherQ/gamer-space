@@ -3,12 +3,12 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from '../assets/Gamer Space-logos_transparent.png';
 import { Link } from 'react-router-dom';
 //None of these work
-import bot from '../utils/scraper'
+// import bot from '../utils/scraper'
 // import {runAPI} from '../utils/api'
 // breaks
 //console.log(runAPI)
 //returns undefined
-console.log(bot)
+// console.log(bot)
 // page for news scrapper
 const Feed = () => {
   const [nav, setNav] = useState(false)

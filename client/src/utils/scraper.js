@@ -63,5 +63,6 @@ const getPostNames = async () => {
     getPostNames()
     .then((PostNames) => console.log(PostNames));
 }
+bot()
 //this gives undefined
-export default bot;
+// export default bot;
