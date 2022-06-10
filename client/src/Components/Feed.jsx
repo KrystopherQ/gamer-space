@@ -79,7 +79,7 @@ function Feed() {
 					</ul>
 				</div>
 			</div>
-			<div className="w-full h-80">
+			<div className={nav ? "hidden" : "w-full h-80"}>
 				<div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full text-white font-serif grid-cols-2">
 					<h1 className="text-4xl">Feed</h1>
 					<div className="flex grid-cols-2 gap-4">
