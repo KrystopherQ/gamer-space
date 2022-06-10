@@ -1,6 +1,7 @@
 require('dotenv').config();
 const request = require('request')
 
+//function runAPI() {
  const getToken = (url, callback) => {
     const options ={
         url:process.env.GET_TOKEN,
@@ -56,5 +57,5 @@ setTimeout(() =>{
 
     } )
 }, 1000)
-
-module.exports 
+// }
+// module.exports = runAPI;
