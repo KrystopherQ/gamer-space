@@ -41,16 +41,10 @@ const getGames = (url,accessToken,callback) => {
         }
     };
     request.get(gameOptions,(err, res, body)=>{
- 
         var gameData = res.body
-        console.log(gameData)
-        // const gameCollection = [].concat(...games)
-        // console.log(gameCollection)
-        //console.log('Status: ${res.statusCode}')
-        //console.log(res)
-        //data and games 
-        //console.log(JSON.parse(res.body))
-        //console.log(JSON.parse(res.body))
+        var gameInfo = JSON.parse(res.body)
+
+        console.log(gameInfo.data[0].name)
     
         
         
