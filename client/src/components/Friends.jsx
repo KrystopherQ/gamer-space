@@ -3,6 +3,8 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from '../assets/Gamer Space-logos_transparent.png';
 import { Link } from 'react-router-dom';
 
+//page for friend functionality
+//search bar can query friend
 function Friends() {
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
