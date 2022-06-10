@@ -50,7 +50,7 @@ function MiniGames() {
 							className={
 								!nav
 									? "hidden"
-									: "absolute top-0 left-0 w-full h-screen bg-[#556b2f] flex flex-col justify-center items-center"
+									: "absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center"
 							}
 						>
 							<li className="py-6 text-4xl hover:bg-neutral">
