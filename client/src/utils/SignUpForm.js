@@ -58,7 +58,7 @@ const SignUpForm = () => {
             onChange={handleInputChange} 
             defaultValue={userFormData.password}
             />
-            <input  type="submit" value="Submit" />
+            <input  type="submit" value="Submit Signup" />
             {/* <button className="btn btn-primary"
             disabled={!(userFormData.username && userFormData.email && userFormData.password)}
             type="submit">
