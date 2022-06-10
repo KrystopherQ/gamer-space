@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/KrystopherQ/gamer-space#readme",
   "devDependencies": {
-    "concurrently": "^7.2.1"
+    "concurrently": "^7.2.1",
+    "web-vitals": "^2.1.4"
   },
   "dependencies": {
     "@apollo/client": "^3.6.6",
