@@ -99,7 +99,6 @@ function Feed() {
 							<div className="card-body">
 								<h2 className="card-title">Top Gaming News</h2>
 								{/* Twitch Games Being played */}
-								<bot></bot>
 								<p>Enter Gaming News Here</p>
 							</div>
 						</div>
