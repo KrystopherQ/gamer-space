@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from '../assets/Gamer Space-logos_transparent.png';
 import SignUpForm from '../utils/SignUpForm'
-import { loginForm } from '../utils/loginForm'
+import LoginForm from '../utils/loginForm'
 import Auth from '../utils/auth'
 
 const Portal = () => {
@@ -132,6 +132,7 @@ const Portal = () => {
                                             <h2 className="card-title">Login/SignUp!</h2>
                                             {/* input SignUpForm */}
                                             <SignUpForm />
+                                            <LoginForm />
                                         </div>
                                     </div>
                                ):(<></>) }
