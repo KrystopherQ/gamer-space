@@ -5,6 +5,7 @@
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
+    "react-start": "cd client && npm run start",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "build": "cd client && npm run build"
@@ -21,7 +22,8 @@
   },
   "homepage": "https://github.com/KrystopherQ/gamer-space#readme",
   "devDependencies": {
-    "concurrently": "^7.2.1"
+    "concurrently": "^7.2.1",
+    "web-vitals": "^2.1.4"
   },
   "dependencies": {
     "@apollo/client": "^3.6.6",
