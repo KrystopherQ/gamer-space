@@ -15,7 +15,7 @@ function Feed() {
 	const handleClick = () => setNav(!nav);
 
 	return (
-		<div>
+		<div className="flex">
 			<div className="fixed w-full h-[80px] flex justify-between items-center px-4 text-gray-300 font-serif ">
 				<div>
 					<img src={Logo} alt="Logo" style={{ width: "200px" }} />
@@ -42,6 +42,9 @@ function Feed() {
 							className="input input-bordered"
 						/>
 					</div>
+					<button className="btn btn-square btn-outline font-serif">
+						<Link to="/searchresults">Go!</Link>
+					</button>
 				</ul>
 
 				{/*Hamburger */}
@@ -55,25 +58,28 @@ function Feed() {
 						className={
 							!nav
 								? "hidden"
-								: "absolute top-0 left-0 w-full h-screen bg-[#556b2f] flex flex-col justify-center items-center"
+								: "absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center"
 						}
 					>
-						<li className="py-6 text-4xl">
+						<li className="py-6 text-4xl hover:bg-neutral">
 							<Link to="/feed">Feed</Link>
 						</li>
-						<li className="py-6 text-4xl">
+						<li className="py-6 text-4xl hover:bg-neutral">
 							<Link to="/profile">Profile</Link>
 						</li>
-						<li className="py-6 text-4xl">
+						<li className="py-6 text-4xl hover:bg-neutral">
 							<Link to="/friends">Friends</Link>
 						</li>
-						<li className="py-6 text-4xl">
+						<li className="py-6 text-4xl hover:bg-neutral">
 							<Link to="/minigames">Mini Games</Link>
+						</li>
+						<li className="py-6 text-4xl hover:bg-neutral">
+							<Link to="/searchresults">Search Results</Link>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<div className="w-full h-80">
+			<div className={nav ? "hidden" : "w-full h-80"}>
 				<div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full text-white font-serif grid-cols-2">
 					<h1 className="text-4xl">Feed</h1>
 					<div className="flex grid-cols-2 gap-4">
