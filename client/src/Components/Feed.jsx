@@ -42,6 +42,9 @@ function Feed() {
 							className="input input-bordered"
 						/>
 					</div>
+					<button className="btn btn-square btn-outline font-serif">
+						<Link to="/searchresults">Go!</Link>
+					</button>
 				</ul>
 
 				{/*Hamburger */}
