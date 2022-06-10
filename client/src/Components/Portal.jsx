@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Feed from "./Feed.jsx";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/Gamer Space-logos_transparent.png";
