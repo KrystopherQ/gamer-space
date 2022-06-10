@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/Gamer Space-logos_transparent.png";
 import { Link } from "react-router-dom";
-=======
-import React, { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import Logo from '../assets/Gamer Space-logos_transparent.png';
-import { Link } from 'react-router-dom';
 //None of these work
 // import bot from '../utils/scraper'
 // import {runAPI} from '../utils/api'
@@ -16,18 +10,6 @@ import { Link } from 'react-router-dom';
 //returns undefined
 // console.log(bot)
 // page for news scrapper
-const Feed = () => {
-  const [nav, setNav] = useState(false)
-  const handleClick = () => setNav(!nav)
-  
-  return (
-    <div>
-      <div className='fixed w-full h-[80px] flex justify-between items-center px-4 text-gray-300 font-serif '>
-        <div>
-          <img src={Logo} alt="Logo" style={{ width: '200px' }} />
-        </div>
->>>>>>> 80cb6ace1f9c5fd9638c4303664dfc6010705f92
-
 function Feed() {
 	const [nav, setNav] = useState(false);
 	const handleClick = () => setNav(!nav);
@@ -107,11 +89,11 @@ function Feed() {
                 </div>
                   );
                 })} */}
-<<<<<<< HEAD
 						<div className="card w-96 bg-primary shadow-2xl">
 							<div className="card-body">
 								<h2 className="card-title">Top Gaming News</h2>
 								{/* Twitch Games Being played */}
+								<bot></bot>
 								<p>Enter Gaming News Here</p>
 							</div>
 						</div>
@@ -120,20 +102,6 @@ function Feed() {
 			</div>
 		</div>
 	);
-=======
-            <div className="card w-96 bg-primary shadow-2xl">
-              <div className="card-body">
-                <h2 className="card-title">Top Gaming News</h2>
-                {/* Twitch Games Being played */}<bot></bot>
-                <p>Enter Gaming News Here</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
->>>>>>> 80cb6ace1f9c5fd9638c4303664dfc6010705f92
 }
 
 export default Feed;
