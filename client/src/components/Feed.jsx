@@ -3,7 +3,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from '../assets/Gamer Space-logos_transparent.png';
 import { Link } from 'react-router-dom';
 
-
+// page for news scrapper
 const Feed = () => {
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
