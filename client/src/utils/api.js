@@ -56,3 +56,5 @@ setTimeout(() =>{
 
     } )
 }, 1000)
+
+module.exports 
