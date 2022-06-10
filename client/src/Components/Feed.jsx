@@ -73,6 +73,9 @@ function Feed() {
 						<li className="py-6 text-4xl hover:bg-neutral">
 							<Link to="/minigames">Mini Games</Link>
 						</li>
+						<li className="py-6 text-4xl hover:bg-neutral">
+							<Link to="/searchresults">Search Results</Link>
+						</li>
 					</ul>
 				</div>
 			</div>
