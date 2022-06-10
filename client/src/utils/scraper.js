@@ -1,6 +1,7 @@
+// import BotCards from '../Components/BotCards'
+
 const axios = require('axios');
 const cheerio = require('cheerio');
-
 
 function bot() {
 const getPostLinks = async () => {
@@ -62,5 +63,6 @@ const getPostNames = async () => {
     getPostNames()
     .then((PostNames) => console.log(PostNames));
 }
+bot()
 //this gives undefined
-// module.exports = bot
+// export default bot;
