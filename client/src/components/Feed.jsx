@@ -3,6 +3,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from '../assets/Gamer Space-logos_transparent.png';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 // import {bot} from '../utils/scraper'
 // console.log(bot)
 =======
@@ -11,12 +12,21 @@ import { Link } from 'react-router-dom';
 >>>>>>> 37f98795407383ff93d6065468d447171858b103
 
 =======
+=======
+//None of these work
+// import {bot} from '../utils/scraper'
+// import {runAPI} from '../utils/api'
+// breaks
+//console.log(runAPI)
+//returns undefined
+//console.log(bot)
+>>>>>>> ef533459c51377eddf03f15414fa3d94c6f439b2
 // page for news scrapper
 >>>>>>> da8666edac771d6b79ba50c6958040825ed49c18
 const Feed = () => {
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
-
+  
   return (
     <div>
       <div className='fixed w-full h-[80px] flex justify-between items-center px-4 text-gray-300 font-serif '>
