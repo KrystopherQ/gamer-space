@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 const BotCards = (props)  => {
   const [state, setState] = useState({ title: '', links: ''});
@@ -28,4 +29,4 @@ BotCards.defaultProps = {
   steps: undefined,
 };
 
-export default BotCards;
+module.exports= BotCards;

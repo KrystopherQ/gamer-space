@@ -1,6 +1,7 @@
+// import BotCards from '../Components/BotCards'
+
 const axios = require('axios');
 const cheerio = require('cheerio');
-import BotCards from '../Components/BotCards';
 
 function bot() {
 const getPostLinks = async () => {
