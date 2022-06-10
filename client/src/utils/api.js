@@ -40,18 +40,17 @@ const getGames = (url,accessToken,callback) => {
             'Authorization': 'Bearer '+ accessToken
         }
     };
-    request.get(gameOptions,(req, res, body)=>{
-        var data = res.body
-        
+    request.get(gameOptions,(err, res, body)=>{
+ 
         var gameData = res.body
-        var games = gameData.map(i=>i.name)
+        console.log(gameData)
         // const gameCollection = [].concat(...games)
         // console.log(gameCollection)
         //console.log('Status: ${res.statusCode}')
         //console.log(res)
         //data and games 
         //console.log(JSON.parse(res.body))
-        console.log(JSON.parse(res.body))
+        //console.log(JSON.parse(res.body))
     
         
         

@@ -7,8 +7,12 @@ import { Link } from 'react-router-dom';
 // console.log(bot)
 =======
 
+<<<<<<< HEAD
 >>>>>>> 37f98795407383ff93d6065468d447171858b103
 
+=======
+// page for news scrapper
+>>>>>>> da8666edac771d6b79ba50c6958040825ed49c18
 const Feed = () => {
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
