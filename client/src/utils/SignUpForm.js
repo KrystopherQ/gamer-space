@@ -59,7 +59,7 @@ const SignUpForm = () => {
                     onChange={handleInputChange}
                     defaultValue={userFormData.password}
                 />
-                <input className='bg-sky-400 text-black mt-2 px-2 rounded font-normal hover:bg-sky-500 hover:font-medium' type="submit" value="Submit Signup" />
+                <input className='bg-info text-black mt-2 px-2 rounded font-normal hover:bg-sky-600 hover:font-medium' type="submit" value="Submit Signup" />
                 {/* <button className="btn btn-primary"
             disabled={!(userFormData.username && userFormData.email && userFormData.password)}
             type="submit">
