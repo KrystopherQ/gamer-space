@@ -1,64 +1,45 @@
 // const axios = require('axios');
 // const cheerio = require('cheerio');
 
-
-
-// const getPostLinks = async () => {
+// const getGamingNews = async () => {
 // 	try {
 // 		const { data } = await axios.get(
 // 			'https://old.reddit.com/r/gamingnews/'
 // 		);
 // 		const $ = cheerio.load(data);
-// 		const links = [];
-// 		// const postTitles = [];
+// 		const gamingNews = [];
 // $('.outbound').each( (index, value) => {
 // 	var link = $(value).attr('href');
 // 	var title = $(value).text()
 // 	if(title) {
-// 		links.push([title,link]);}
+// 		gamingNews.push([title,link]);}
 // 	});
-// // $('div > p.title>a').each((_idx,el) => {
-// 	// const postTitle = $(el).text()
-// // 	// var link = $(value).attr('href');
-// // 	links.push([postTitle, link])
-// // // 	links.push({"link": link});
-// // });
-
-// // });
-// return links;
+// return gamingNews;
 // } catch (error) {
 // 	throw error;
 // }
 // }
-// getPostLinks()
-// .then((links) => console.log(links));
+// getGamingNews().then((gamingNews) => console.log(gamingNews));    
 
 
 
-// const getPostNames = async () => {
+// const getRGames = async () => {
 // 	try {
 // 		const { data } = await axios.get(
 // 			'https://old.reddit.com/r/games/'
 // 		);
 // 		const $ = cheerio.load(data);
-// 		const PostNames = [];
-// 		// $('div > p.title > a').each((_idx, el) => {
-// 		// 	const postTitle = $(el).text()
-// 		// 	var link = $(value).attr('href');
-// 		// 	PostNames.push(postTitle,{"link": link})
-// 		// });
-		
+// 		const games = [];		
 // 		$('.outbound').each( (index, value) => {
 // 					var link = $(value).attr('href');
 // 			    var title = $(value).text()
 // 			if(link){
-// 					PostNames.push([title,link]);}
+// 					games.push([title,link]);}
 // 				});
-// 		return PostNames;
+// 		return games;
 // 	} catch (error) {
 // 		throw error;
 // 	}
 // };
-// getPostNames()
-// .then((PostNames) => console.log(PostNames));
+// getRGames().then((games) => console.log(games));
 
