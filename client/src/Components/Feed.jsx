@@ -22,7 +22,7 @@ function Feed() {
 
 	return (
 		<div className="grid-rows-2">
-			<div className="z-40 fixed w-full h-[80px] flex justify-between items-center px-4 text-gray-300 font-serif ">
+			<div className="realtive bg-gray-900 z-50 fixed w-full h-[80px] flex justify-between items-center px-4 text-gray-300 font-serif">
 				<div>
 					<img src={Logo} alt="Logo" style={{ width: "200px" }} />
 				</div>
@@ -87,34 +87,23 @@ function Feed() {
 			</div>
 			<div className={nav ? "hidden" : "w-full h-80"}>
 				<div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full text-white font-serif grid-cols-2">
-					<h1 className="text-4xl z-40">Feed</h1>
-					<div className=" absolute overflow-hidden flex flex-col grid-row-2 gap-4">
+					<h1 className="text-4xl pb-8 z-40">Feed</h1>
+					<div className=" absolute bottom-0 flex flex-col grid-row-2 h-4/5">
 						{/* Gaming News */}
 						{bot.map((newsFeed) => {
 							console.log(bot);
 							return (
-								<div class="overflow-hidden">
-									<table class="table table-compact w-full">
-										<thead>
-											<tr>
-												<th></th>
-												<th>Name</th>
-											</tr>
-										</thead>
+								<div>
+									<table className=" m-1 max-w-[1000px] table table-compact w-full">
 										<tbody>
 											<tr>
-												<th>-</th>
 												<a href={newsFeed.link}>
-													<td>{newsFeed.title}</td>
+													<td className="bg-primary hover:bg-slate-500">
+														{newsFeed.title}
+													</td>
 												</a>
 											</tr>
 										</tbody>
-										<tfoot>
-											<tr>
-												<th></th>
-												<th>Name</th>
-											</tr>
-										</tfoot>
 									</table>
 								</div>
 							);
