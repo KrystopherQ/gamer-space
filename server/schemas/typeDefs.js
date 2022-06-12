@@ -9,7 +9,15 @@ type User {
     password: String
     savedGames: [Game]!
     posts: [Post]
+
 }
+
+type UserResult {
+    users: [User]
+    currentPage: Int 
+    totalPages: Int
+}
+
 type Game {
     gameId: ID
     name: String
@@ -36,15 +44,9 @@ type Auth{
     user: User
 }
 
-type News{
-    title: String
-    link: String
-}
-
 type Query{
     me: User
-    getGamingNews: [News]
-    getPostNames: [News]
+    getUsers(search: String, page: Int, limit: Int): UserResult
 }
 
 type Mutation {
