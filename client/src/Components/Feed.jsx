@@ -108,13 +108,6 @@ function Feed() {
 								</div>
 							);
 						})}
-						<div className="card w-96 bg-primary shadow-2xl">
-							<div className="card-body">
-								<h2 className="card-title">Top Gaming News</h2>
-								{/* Twitch Games Being played */}
-								<p>Enter Gaming News Here</p>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
