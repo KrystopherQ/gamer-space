@@ -2,35 +2,31 @@ import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/Gamer Space-logos_transparent.png";
 import { Link } from "react-router-dom";
-import api from '../utils/api';
-
-
+import api from "../utils/api";
 
 function Feed() {
 	const [nav, setNav] = useState(false);
 	const handleClick = () => setNav(!nav);
 
-const [bot, setBot]= useState([])
-const [scrape,setScrape]= useState([])
-useEffect(()=>{
-	api.bot().then(data=>{
-		setBot(data)
-	})
-	
-	api.botScraper().then(data=>{
-		setScrape(data)
-	})
-},[])
+	const [bot, setBot] = useState([]);
+	const [scrape, setScrape] = useState([]);
+	useEffect(() => {
+		api.bot().then((data) => {
+			setBot(data);
+		});
 
-
+		api.botScraper().then((data) => {
+			setScrape(data);
+		});
+	}, []);
 
 	return (
-		<div className="flex">
+		<div>
 			<div className="fixed w-full h-[80px] flex justify-between items-center px-4 text-gray-300 font-serif ">
 				<div>
 					<img src={Logo} alt="Logo" style={{ width: "200px" }} />
 				</div>
-				{console.log(bot,scrape)}
+				{console.log(bot, scrape)}
 				{/*navbar */}
 				<ul className="hidden md:flex">
 					<li className="btn btn-ghost bg-neutral normal-case text-xl">
@@ -92,18 +88,20 @@ useEffect(()=>{
 			<div className={nav ? "hidden" : "w-full h-80"}>
 				<div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full text-white font-serif grid-cols-2">
 					<h1 className="text-4xl">Feed</h1>
-					<div className="flex grid-row-2 gap-4">
+					<div className="absolute flex flex-col grid-row-2 gap-4">
 						{/* Gaming News */}
 						{bot.map((newsFeed) => {
-                console.log(bot)
-                  return (
-                <div className="card w-96 bg-neutral shadow-2xl">
-                <div className="card-body">
-                <a href={newsFeed.link}><h2 className="card-title">{newsFeed.title}</h2></a>
-                </div>
-                </div>
-                  );
-                })}
+							console.log(bot);
+							return (
+								<div className="card w-96 bg-neutral shadow-2xl">
+									<div className="card-body">
+										<a href={newsFeed.link}>
+											<h2 className="card-title">{newsFeed.title}</h2>
+										</a>
+									</div>
+								</div>
+							);
+						})}
 						<div className="card w-96 bg-primary shadow-2xl">
 							<div className="card-body">
 								<h2 className="card-title">Top Gaming News</h2>
