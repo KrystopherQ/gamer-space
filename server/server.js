@@ -41,7 +41,7 @@ const request = require('request')
         }
         //console.log('status: ${res.statusCode')
         //bearer is body
-        console.log(body)
+        //console.log(body)
         callback(res);
     });
 };
@@ -54,7 +54,7 @@ getToken(process.env.GET_TOKEN,(res)=>{
 app.get('/api/games', (req,res)=>{
     setTimeout(() =>{
         getGames(res, process.env.GET_GAMES, AT,(response) =>{
-            console.log(response)
+            //console.log(response)
         } )
     }, 1000)
    // res.json({message: 'success'})
@@ -71,7 +71,7 @@ const getGames = (res, url,accessToken,callback) => {
     request.get(gameOptions,(err, response, body)=>{
        // var gameData = res.body
         var gameInfo = JSON.parse(response.body)
-        console.log(gameInfo)
+        //console.log(gameInfo)
         res.json(gameInfo)
         //console.log(gameInfo.data[0].name)   
     })
@@ -84,7 +84,7 @@ const getGames = (res, url,accessToken,callback) => {
 app.get('/api/gamenews', (req,res)=>{
     getGamingNews()
     .then((gamingNews) =>{ 
-    console.log(gamingNews)
+    //console.log(gamingNews)
         res.json(gamingNews)
 });    
 })
@@ -92,7 +92,7 @@ app.get('/api/gamenews', (req,res)=>{
 app.get('/api/news', (req,res)=>{
     getRGames()
     .then((games) => {
-    console.log(games)
+    //console.log(games)
     res.json(games)
 
 });

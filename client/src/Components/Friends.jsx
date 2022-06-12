@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/Gamer Space-logos_transparent.png";
 import { Link } from "react-router-dom";
+import SearchUser from "../utils/searchUsers";
 
 //page for friend functionality
 //search bar can query friend
@@ -30,11 +31,7 @@ function Friends() {
 						<Link to="/minigames">Mini Games</Link>
 					</li>
 					<div className="form-control">
-						<input
-							type="text"
-							placeholder="Search"
-							className="input input-bordered"
-						/>
+						<SearchUser />
 					</div>
 					<button className="btn btn-square btn-outline font-serif">
 						<Link to="/searchresults">Go!</Link>

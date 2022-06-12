@@ -18,3 +18,16 @@ export const GET_ME = gql `
             }
         }
     }`
+
+export const SEARCH_USER = gql `
+query getUsers{
+    getUsers(search: "", page: 1, limit:5){
+      currentPage
+      totalPages
+      users{
+        username
+      }  
+  }
+  }
+  
+`

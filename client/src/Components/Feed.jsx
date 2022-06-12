@@ -91,7 +91,7 @@ function Feed() {
 					<div className=" absolute bottom-0 flex flex-col grid-row-2 h-4/5">
 						{/* Gaming News */}
 						{bot.map((newsFeed) => {
-							console.log(bot);
+							// console.log(bot);
 							return (
 								<div>
 									<table className=" m-1 max-w-[1000px] table table-compact w-full">
