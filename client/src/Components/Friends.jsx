@@ -74,20 +74,49 @@ function Friends() {
 				</div>
 			</div>
 			<div className={nav ? "hidden" : "w-full h-80"}>
-				<div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full text-white font-serif grid-cols-2">
-					<h1 className="text-4xl">Friends</h1>
-					<div className="flex grid-cols-2 gap-4">
-						<div className="card w-96 bg-neutral shadow-2xl">
-							<div className="card-body">
-								<h2 className="card-title">Friend Search</h2>
-								<p>Enter Friends List Here</p>
-							</div>
-						</div>
-						<div className="card w-96 bg-primary shadow-2xl">
-							<div className="card-body">
-								<h2 className="card-title">Friend Posts</h2>
-								<p>Enter Friend Posts Here</p>
-							</div>
+				<div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full text-white  font-serif grid-cols-2">
+					<h1 className="text-4xl pb-8 z-40">Feed</h1>
+					<div className=" absolute bottom-0 flex flex-col grid-row-2 h-4/5">
+						<div>
+							<table className=" m-1 max-w-[1000px] table table-compact w-full">
+								<tbody>
+									<tr>
+										<a>
+											<td className="bg-primary hover:bg-slate-500">
+												friends
+											</td>
+										</a>
+									</tr>
+									<tr>
+										<a>
+											<td className="bg-primary hover:bg-slate-500">
+												friends
+											</td>
+										</a>
+									</tr>
+									<tr>
+										<a>
+											<td className="bg-primary hover:bg-slate-500">
+												friends
+											</td>
+										</a>
+									</tr>
+									<tr>
+										<a>
+											<td className="bg-primary hover:bg-slate-500">
+												friends
+											</td>
+										</a>
+									</tr>
+									<tr>
+										<a>
+											<td className="bg-primary hover:bg-slate-500">
+												friends
+											</td>
+										</a>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
