@@ -36,15 +36,15 @@ type Auth{
     user: User
 }
 
-type Link{
+type News{
     title: String
     link: String
 }
 
 type Query{
     me: User
-    getPostLinks: [Link]
-    getPostNames: [Link]
+    getGamingNews: [News]
+    getPostNames: [News]
 }
 
 type Mutation {
