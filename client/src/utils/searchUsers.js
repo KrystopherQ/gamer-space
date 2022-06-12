@@ -29,6 +29,10 @@ const searchUser= () => {
         })
     }
 
-    return ()
+    return (
+        <form onSubmit={handleFormSubmmit}>
+            <input type="text" name="username" placeholder="search friends" onChange={handleInputChange} defaultValue={searchForm.username}/>
+        </form>
+    )
 }
-export default searchUsers;
+export default searchUser;
