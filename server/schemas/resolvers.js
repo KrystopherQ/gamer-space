@@ -11,16 +11,26 @@ const resolvers = {
             }
             throw new AuthenticationError('Login Please'); ''
         },
-        // getPostLinks: async() =>{
-        //     if(){
-
-        //     }
-        // },
-        // getPostNames: async() ={
-        //     if(){
-
-        //     }
-        // }
+        getUsers: async (_parent, args) => {
+            const { search= null, page = 1, limit = 20} = args;
+            let searchQuery = {};
+            if(search) {
+                searchQuery = {
+                    $or: [{username: {$regex: search, $options:'i'}}]
+                }
+            }
+            const users = await User.find(searchQuery)
+            .limit(limit)
+            .skip((page-1)*limit)
+            .lean();
+            const count = await User.countDocuments(searchQuery);
+            return {
+                users,
+                totalPages: Math.ceil(count/limit),
+                currentPage: page
+            }
+        }
+        
     },
     Mutation: {
         addUser: async (_parent, { username, email, password }) => {
