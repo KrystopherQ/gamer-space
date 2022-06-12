@@ -3,9 +3,9 @@ import { useQuery } from '@apollo/client'
 import { SEARCH_USER } from './queries'
 
 
-const searchUser= () => {
+const SearchUser= () => {
     const [searchForm, setSearchForm] = useState({username: ''})
-    const [search] = useQuery(SEARCH_USER)
+    const search = useQuery(SEARCH_USER)
     const handleInputChange = (event) => {
         const {name, value} = event.target;
         setSearchForm({...searchForm, [name]: value})
@@ -18,7 +18,7 @@ const searchUser= () => {
         try {
 
             const {data} = await search({
-                variables: {...userFormData}
+                variables: {...searchForm}
             });
 
         } catch (err) {
@@ -30,9 +30,9 @@ const searchUser= () => {
     }
 
     return (
-        <form onSubmit={handleFormSubmmit}>
+        <form onSubmit={handleFormSubmit}>
             <input type="text" name="username" placeholder="search friends" onChange={handleInputChange} defaultValue={searchForm.username}/>
         </form>
     )
 }
-export default searchUser;
+export default SearchUser;
