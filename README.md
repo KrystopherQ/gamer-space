@@ -26,7 +26,11 @@ This project has several dependecies on the both the server and client sides of 
 ## Usage:
 
 This program is for gamers only. 
- 
+
+![Demo of site](./client/src/assets/demo.gif)
+
+
+
 ## License: [!['License: MIT'](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This project is covered under the The MIT License 
