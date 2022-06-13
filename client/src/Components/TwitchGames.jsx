@@ -22,7 +22,7 @@ function TwitchGames() {
 				<div>
 					<img src={Logo} alt="Logo" style={{ width: "200px" }} />
 				</div>
-				{console.log(twitchGames)}
+				{console.log(twitchGames.data)}
 				{/*navbar */}
 				<ul className="hidden md:flex">
 					<li className="btn btn-ghost bg-neutral normal-case text-xl">
@@ -73,8 +73,7 @@ function TwitchGames() {
 					<h1 className="text-4xl pb-8 z-40">Feed</h1>
 					<div className=" absolute bottom-0 flex flex-col grid-row-2 h-4/5">
 						{/*TwitchGames */}
-						{twitchGames.map((data) => {
-							console.log(data);
+						{twitchGames.data.map((data) => {
 							return (
 								<div>
 									<table className=" m-1 max-w-[1000px] table table-compact w-full">
