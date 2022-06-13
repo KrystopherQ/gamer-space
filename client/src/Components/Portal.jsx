@@ -6,6 +6,7 @@ import SignUpForm from "../utils/SignUpForm";
 import LoginForm from "../utils/loginForm";
 import Auth from "../utils/auth";
 import api from "../utils/api";
+import portalImage from "../assets/gamer-logo-design-template-84b6bb1128e9cc80ac53113fa717f321_screen.jpeg"
 
 const Portal = () => {
 	const [showPortal, setShowPortal] = useState(false);
@@ -128,7 +129,7 @@ const Portal = () => {
 				//render login Hero
 				// style={{ backgroundImage: `url("https://melmagazine.com/wp-content/uploads/2018/08/1PLZJfMY2tvncNstYR59cmw.gif")` }}
 				<>
-					<div className="hero min-h-screen bg-base-200">
+					<div className="hero min-h-screen" style={{backgroundImage: `url(${portalImage})`}}>
 						<div className="hero-content text-center">
 							<div className="max-w-md">
 								<h1 className="text-5xl font-bold text-neutral">
