@@ -24,6 +24,9 @@ function MiniGames() {
 						<li className="btn btn-ghost bg-neutral normal-case text-xl">
 							<Link to="/minigames">Mini Games</Link>
 						</li>
+						<li className="btn btn-ghost normal-case text-xl">
+							<Link to="/twitchgames">Twitch Games</Link>
+						</li>
 					</ul>
 
 					{/*Hamburger */}
@@ -48,6 +51,9 @@ function MiniGames() {
 							</li>
 							<li className="py-6 text-4xl hover:bg-neutral">
 								<Link to="/minigames">MiniGames</Link>
+							</li>
+							<li className="btn btn-ghost normal-case text-xl">
+								<Link to="/twitchgames">Twitch Games</Link>
 							</li>
 						</ul>
 					</div>
