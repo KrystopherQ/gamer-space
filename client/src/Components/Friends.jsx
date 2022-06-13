@@ -54,6 +54,9 @@ function Friends() {
 					<li className="btn btn-ghost normal-case text-xl">
 						<Link to="/minigames">Mini Games</Link>
 					</li>
+					<li className="btn btn-ghost normal-case text-xl">
+										<Link to="/twitchgames">Twitch Games</Link>
+								</li>
 					<div className="form-control">
 						<SearchUser
 							handleInputChange={handleInputChange}
@@ -86,6 +89,9 @@ function Friends() {
 						<li className="py-6 text-4xl hover:bg-neutral">
 							<Link to="/minigames">Mini Games</Link>
 						</li>
+						<li className="btn btn-ghost normal-case text-xl">
+										<Link to="/twitchgames">Twitch Games</Link>
+								</li>
 					</ul>
 				</div>
 			</div>
