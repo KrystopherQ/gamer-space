@@ -32,7 +32,7 @@ const LoginForm = () => {
     }
     return (
         <form onSubmit={handleFormSubmit}>
-            <input type="text" name="email" placeholder="Email" className="input input-bordered input-info w-full max-w-xs"
+            <input type="text" name="email" placeholder="E-mail" className="input input-bordered input-info w-full max-w-xs"
                 onChange={handleInputChange}
                 defaultValue={userFormData.email}
             />
