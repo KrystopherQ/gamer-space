@@ -2,6 +2,7 @@ import Feed from "./Components/Feed";
 import Friends from "./Components/Friends.jsx";
 import MiniGames from "./Components/MiniGames.jsx";
 import Portal from "./Components/Portal"
+import TwitchGames from "./Components/TwitchGames";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React from 'react';
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client'
@@ -34,6 +35,7 @@ function App() {
           <Route exact path='/feed' element={<Feed />} />
           <Route path='/friends' element={<Friends />} />
           <Route path='/minigames' element={<MiniGames />} />
+          <Route path='/twitchGames' element={<TwitchGames />} />
         </Routes>
       </Router>
     </ApolloProvider>
