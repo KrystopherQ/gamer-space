@@ -3,12 +3,36 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/Gamer Space-logos_transparent.png";
 import { Link } from "react-router-dom";
 import SearchUser from "../utils/searchUsers";
+import { useQuery } from '@apollo/client'
+import { SEARCH_USER } from '../utils/queries'
+
 
 //page for friend functionality
 //search bar can query friend
 function Friends() {
 	const [nav, setNav] = useState(false);
 	const handleClick = () => setNav(!nav);
+	const [results, setResults] = useState([])
+    const [searchForm, setSearchForm] = useState({username: ''})
+    const {loading,data} = useQuery(SEARCH_USER)
+    const search = data?.getUsers.users || []
+    const handleInputChange = (event) => {
+        const {name, value} = event.target;
+        console.log(value)
+        setSearchForm({...searchForm, [name]: value})
+    }
+    const handleFormSubmit= async (event) => {
+        event.preventDefault();
+            console.log(search)
+            const newSearch = search.filter(result => result.username.toLowerCase().includes(searchForm.username.toLowerCase()))
+
+        console.log(newSearch)
+        setResults(newSearch)
+       
+        setSearchForm({
+            username: '',
+        })
+    }
 	return (
 		<div className="flex">
 			<div className="fixed w-full h-[80px] flex justify-between items-center px-4 text-gray-300 font-serif ">
@@ -31,11 +55,9 @@ function Friends() {
 						<Link to="/minigames">Mini Games</Link>
 					</li>
 					<div className="form-control">
-						<SearchUser />
+						<SearchUser  handleInputChange={handleInputChange} handleFormSubmit={handleFormSubmit} searchForm={searchForm}/>
 					</div>
-					<button className="btn btn-square btn-outline font-serif">
-						<Link to="/searchresults">Go!</Link>
-					</button>
+					
 				</ul>
 
 				{/*Hamburger */}
@@ -77,41 +99,17 @@ function Friends() {
 						<div>
 							<table className=" m-1 max-w-[1000px] table table-compact w-full">
 								<tbody>
-									<tr>
+									{results.map(result=>{
+										return (
+											<tr>
 										<a>
 											<td className="bg-primary hover:bg-slate-500">
-												friends
+												{result.username}
 											</td>
 										</a>
 									</tr>
-									<tr>
-										<a>
-											<td className="bg-primary hover:bg-slate-500">
-												friends
-											</td>
-										</a>
-									</tr>
-									<tr>
-										<a>
-											<td className="bg-primary hover:bg-slate-500">
-												friends
-											</td>
-										</a>
-									</tr>
-									<tr>
-										<a>
-											<td className="bg-primary hover:bg-slate-500">
-												friends
-											</td>
-										</a>
-									</tr>
-									<tr>
-										<a>
-											<td className="bg-primary hover:bg-slate-500">
-												friends
-											</td>
-										</a>
-									</tr>
+										)
+									})}
 								</tbody>
 							</table>
 						</div>

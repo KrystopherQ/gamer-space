@@ -46,7 +46,7 @@ type Auth{
 
 type Query{
     me: User
-    getUsers(search: String, page: Int, limit: Int): UserResult
+    getUsers(search: String): UserResult
 }
 
 type Mutation {
