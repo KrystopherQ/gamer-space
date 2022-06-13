@@ -19,24 +19,11 @@ function MiniGames() {
 							<Link to="/feed">Feed</Link>
 						</li>
 						<li className="btn btn-ghost normal-case text-xl">
-							<Link to="/profile">Profile</Link>
-						</li>
-						<li className="btn btn-ghost normal-case text-xl">
 							<Link to="/friends">Friends</Link>
 						</li>
 						<li className="btn btn-ghost bg-neutral normal-case text-xl">
 							<Link to="/minigames">Mini Games</Link>
 						</li>
-						<div className="form-control">
-							<input
-								type="text"
-								placeholder="Search"
-								className="input input-bordered"
-							/>
-						</div>
-						<button className="btn btn-square btn-outline font-serif">
-							<Link to="/searchresults">Go!</Link>
-						</button>
 					</ul>
 
 					{/*Hamburger */}
@@ -55,9 +42,6 @@ function MiniGames() {
 						>
 							<li className="py-6 text-4xl hover:bg-neutral">
 								<Link to="/feed">Feed</Link>
-							</li>
-							<li className="py-6 text-4xl hover:bg-neutral">
-								<Link to="/profile">Profile</Link>
 							</li>
 							<li className="py-6 text-4xl hover:bg-neutral">
 								<Link to="/friends">Friends</Link>

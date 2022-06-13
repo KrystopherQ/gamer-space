@@ -12,25 +12,25 @@ const resolvers = {
             throw new AuthenticationError('Login Please'); ''
         },
         getUsers: async (_parent, args) => {
-            const { search= null, page = 1, limit = 20} = args;
+            const { search = null, page = 1, limit = 20 } = args;
             let searchQuery = {};
-            if(search) {
+            if (search) {
                 searchQuery = {
-                    $or: [{username: {$regex: search, $options:'i'}}]
+                    $or: [{ username: { $regex: search, $options: 'i' } }]
                 }
             }
             const users = await User.find(searchQuery)
-            .limit(limit)
-            .skip((page-1)*limit)
-            .lean();
+                .limit(limit)
+                .skip((page - 1) * limit)
+                .lean();
             const count = await User.countDocuments(searchQuery);
             return {
                 users,
-                totalPages: Math.ceil(count/limit),
+                totalPages: Math.ceil(count / limit),
                 currentPage: page
             }
         }
-        
+
     },
     Mutation: {
         addUser: async (_parent, { username, email, password }) => {
@@ -56,7 +56,6 @@ const resolvers = {
             if (context.user) {
                 const updatedUser = await User.findOneAndUpdate(
                     { _id: context.user_id },
-                    //may need to be game from saveGame mutation
                     { $addToSet: { savedGames: { gameId } } },
                     { new: true }
                 )

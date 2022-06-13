@@ -1,22 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/Gamer Space-logos_transparent.png";
 import SignUpForm from "../utils/SignUpForm";
 import LoginForm from "../utils/loginForm";
 import Auth from "../utils/auth";
+import api from "../utils/api";
 
 const Portal = () => {
 	const [showPortal, setShowPortal] = useState(false);
 	const [nav, setNav] = useState(false);
 	const handleClick = () => setNav(!nav);
+
+	const [bot, setBot] = useState([]);
+	const [scrape, setScrape] = useState([]);
+	useEffect(() => {
+		api.bot().then((data) => {
+			setBot(data);
+		});
+
+		api.botScraper().then((data) => {
+			setScrape(data);
+		});
+	}, []);
 	return (
 		<>
 			{Auth.loggedIn() ? (
 				// render pages
 				<>
-					<div className="flex">
-						<div className="fixed w-full h-[80px] flex justify-between items-center px-4 text-gray-300 font-serif ">
+					<div className="grid-rows-2">
+						<div className="realtive bg-gray-900 z-50 fixed w-full h-[80px] flex justify-between items-center px-4 text-gray-300 font-serif">
 							<div>
 								<img
 									src={Logo}
@@ -24,7 +37,7 @@ const Portal = () => {
 									style={{ width: "200px" }}
 								/>
 							</div>
-
+							{console.log(bot, scrape)}
 							{/*navbar */}
 							<ul className="hidden md:flex">
 								<li className="btn btn-ghost bg-neutral normal-case text-xl">
@@ -84,28 +97,28 @@ const Portal = () => {
 							</div>
 						</div>
 						<div className={nav ? "hidden" : "w-full h-80"}>
-							<div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full text-white font-serif grid-cols-2">
-								<h1 className="text-4xl">Feed</h1>
-								<div className="flex grid-cols-2 gap-4">
+							<div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full text-white  font-serif grid-cols-2">
+								<h1 className="text-4xl pb-8 z-40">Feed</h1>
+								<div className=" absolute bottom-0 flex flex-col grid-row-2 h-4/5">
 									{/* Gaming News */}
-									{/* {bot.map((newsFeed) => {
-                console.log(bot)
-                  return (
-                <div className="card w-96 bg-neutral shadow-2xl">
-                <div className="card-body">
-                  <h2  className="card-title">{newsFeed.postNames}</h2>
-                  <p>{newsFeed.links}</p>
-                </div>
-                </div>
-                  );
-                })} */}
-									<div className="card w-96 bg-primary shadow-2xl">
-										<div className="card-body">
-											<h2 className="card-title">Top Gaming News</h2>
-											{/* Twitch Games Being played */}
-											<p>Enter Gaming News Here</p>
-										</div>
-									</div>
+									{bot.map((newsFeed) => {
+										// console.log(bot);
+										return (
+											<div>
+												<table className=" m-1 max-w-[1000px] table table-compact w-full">
+													<tbody>
+														<tr>
+															<a href={newsFeed.link}>
+																<td className="bg-primary hover:bg-slate-500">
+																	{newsFeed.title}
+																</td>
+															</a>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										);
+									})}
 								</div>
 							</div>
 						</div>
