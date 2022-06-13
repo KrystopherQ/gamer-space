@@ -116,13 +116,13 @@ const Portal = () => {
 				//render login Hero
 				// style={{ backgroundImage: `url("https://melmagazine.com/wp-content/uploads/2018/08/1PLZJfMY2tvncNstYR59cmw.gif")` }}
 				<>
-					<div className="hero min-h-screen" style={{backgroundImage: `url(${portalImage})`}}>
+					<div className="hero min-h-screen" style={{backgroundImage: `url(https://wallpaperaccess.com/full/50035.jpg)`}}>
 						<div className="hero-content text-center">
 							<div className="max-w-md">
-								<h1 className="text-5xl font-bold text-neutral">
+								<h1 className="text-5xl font-bold text-white">
 									GaMeR sPaCe
 								</h1>
-								<p className="py-6 font-bold text-neutral">
+								<p className="py-6 font-bold text-white">
 									In A wOrLd WhErE GaMeRs ArE nOt ToXiC
 								</p>
 								<button
