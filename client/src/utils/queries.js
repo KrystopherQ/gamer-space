@@ -29,3 +29,11 @@ query getUsers{
   }
   
 `
+
+// query getUsers($username:String!{
+//     getUsers($username: username){
+//         users{
+//             username
+//         }
+//     }
+// }
