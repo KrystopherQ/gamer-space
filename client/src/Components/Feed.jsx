@@ -33,9 +33,6 @@ function Feed() {
 						<Link to="/feed">Feed</Link>
 					</li>
 					<li className="btn btn-ghost normal-case text-xl">
-						<Link to="/profile">Profile</Link>
-					</li>
-					<li className="btn btn-ghost normal-case text-xl">
 						<Link to="/friends">Friends</Link>
 					</li>
 					<li className="btn btn-ghost normal-case text-xl">
@@ -59,9 +56,6 @@ function Feed() {
 					>
 						<li className="py-6 text-4xl hover:bg-neutral">
 							<Link to="/feed">Feed</Link>
-						</li>
-						<li className="py-6 text-4xl hover:bg-neutral">
-							<Link to="/profile">Profile</Link>
 						</li>
 						<li className="py-6 text-4xl hover:bg-neutral">
 							<Link to="/friends">Friends</Link>
