@@ -41,16 +41,6 @@ function Feed() {
 					<li className="btn btn-ghost normal-case text-xl">
 						<Link to="/minigames">Mini Games</Link>
 					</li>
-					<div className="form-control">
-						<input
-							type="text"
-							placeholder="Search"
-							className="input input-bordered"
-						/>
-					</div>
-					<button className="btn btn-square btn-outline font-serif">
-						<Link to="/searchresults">Go!</Link>
-					</button>
 				</ul>
 
 				{/*Hamburger */}
