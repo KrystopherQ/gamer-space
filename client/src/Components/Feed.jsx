@@ -39,8 +39,8 @@ function Feed() {
 						<Link to="/minigames">Mini Games</Link>
 					</li>
 					<li className="btn btn-ghost normal-case text-xl">
-										<Link to="/twitchgames">Twitch Games</Link>
-								</li>
+						<Link to="/twitchgames">Twitch Games</Link>
+					</li>
 				</ul>
 
 				{/*Hamburger */}
@@ -67,8 +67,8 @@ function Feed() {
 							<Link to="/minigames">Mini Games</Link>
 						</li>
 						<li className="btn btn-ghost normal-case text-xl">
-										<Link to="/twitchgames">Twitch Games</Link>
-								</li>
+							<Link to="/twitchgames">Twitch Games</Link>
+						</li>
 					</ul>
 				</div>
 			</div>

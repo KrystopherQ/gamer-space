@@ -55,8 +55,8 @@ function Friends() {
 						<Link to="/minigames">Mini Games</Link>
 					</li>
 					<li className="btn btn-ghost normal-case text-xl">
-										<Link to="/twitchgames">Twitch Games</Link>
-								</li>
+						<Link to="/twitchgames">Twitch Games</Link>
+					</li>
 					<div className="form-control">
 						<SearchUser
 							handleInputChange={handleInputChange}
@@ -90,8 +90,8 @@ function Friends() {
 							<Link to="/minigames">Mini Games</Link>
 						</li>
 						<li className="btn btn-ghost normal-case text-xl">
-										<Link to="/twitchgames">Twitch Games</Link>
-								</li>
+							<Link to="/twitchgames">Twitch Games</Link>
+						</li>
 					</ul>
 				</div>
 			</div>

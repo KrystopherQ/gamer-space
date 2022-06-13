@@ -51,7 +51,7 @@ const Portal = () => {
 									<Link to="/minigames">Mini Games</Link>
 								</li>
 								<li className="btn btn-ghost normal-case text-xl">
-										<Link to="/twitchgames">Twitch Games</Link>
+									<Link to="/twitchgames">Twitch Games</Link>
 								</li>
 							</ul>
 
