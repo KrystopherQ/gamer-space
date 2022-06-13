@@ -48,9 +48,6 @@ function Friends() {
 					<li className="btn btn-ghost normal-case text-xl">
 						<Link to="/feed">Feed</Link>
 					</li>
-					<li className="btn btn-ghost normal-case text-xl">
-						<Link to="/profile">Profile</Link>
-					</li>
 					<li className="btn btn-ghost bg-neutral normal-case text-xl">
 						<Link to="/friends">Friends</Link>
 					</li>
