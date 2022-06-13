@@ -6,7 +6,7 @@ import SignUpForm from "../utils/SignUpForm";
 import LoginForm from "../utils/loginForm";
 import Auth from "../utils/auth";
 import api from "../utils/api";
-import portalImage from "../assets/gamer-logo-design-template-84b6bb1128e9cc80ac53113fa717f321_screen.jpeg"
+import portalImage from "../assets/gamer-logo-design-template-84b6bb1128e9cc80ac53113fa717f321_screen.jpeg";
 
 const Portal = () => {
 	const [showPortal, setShowPortal] = useState(false);
@@ -86,8 +86,8 @@ const Portal = () => {
 						</div>
 						<div className={nav ? "hidden" : "w-full h-80"}>
 							<div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full text-white  font-serif grid-cols-2">
-								<h1 className="text-4xl pb-8 z-40">Feed</h1>
 								<div className=" absolute bottom-0 flex flex-col grid-row-2 h-4/5">
+									<h1 className="text-4xl pb-8 z-40">Feed</h1>
 									{/* Gaming News */}
 									{bot.map((newsFeed) => {
 										// console.log(bot);
@@ -116,7 +116,12 @@ const Portal = () => {
 				//render login Hero
 				// style={{ backgroundImage: `url("https://melmagazine.com/wp-content/uploads/2018/08/1PLZJfMY2tvncNstYR59cmw.gif")` }}
 				<>
-					<div className="hero min-h-screen" style={{backgroundImage: `url(https://wallpaperaccess.com/full/50035.jpg)`}}>
+					<div
+						className="hero min-h-screen"
+						style={{
+							backgroundImage: `url(https://wallpaperaccess.com/full/50035.jpg)`,
+						}}
+					>
 						<div className="hero-content text-center">
 							<div className="max-w-md">
 								<h1 className="text-5xl font-bold text-white">
