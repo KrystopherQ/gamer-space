@@ -38,7 +38,7 @@ function Friends() {
 	};
 	return (
 		<div className="flex">
-			<div className="fixed w-full h-[80px] flex justify-between items-center px-4 text-gray-300 font-serif ">
+			<div className="fixed bg-gray-900 z-50 w-full h-[80px] flex justify-between items-center px-4 text-gray-300 font-serif ">
 				<div>
 					<img src={Logo} alt="Logo" style={{ width: "200px" }} />
 				</div>
